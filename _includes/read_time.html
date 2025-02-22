@@ -1,7 +1,7 @@
 <span class="reading-time" title="Estimated read time">
   {% assign post_date = page.date %}
   {% assign current_time = 'now' | date: '%s' %}  <!-- 현재 시간을 초 단위로 가져오기 -->
-  {% assign post_time = page.date | date: '%s' %}  <!-- 게시된 시간도 초 단위로 변환 -->
+  {% assign post_time = post_date | date: '%s' %}  <!-- 게시된 시간도 초 단위로 변환 -->
 
   {% assign time_difference = current_time | minus: post_time %}  <!-- 두 시간의 차이 계산 -->
 
