@@ -24,7 +24,7 @@
   {% elsif time_difference < 31536000 %}
     {% assign months = time_difference | divided_by: 2592000 %}
     {{ months }} 개월 전
-  {% elseif time_difference < 31536000 %}
+  {% elsif time_difference < 31536000 %}
     {% assign years = time_difference | divided_by: 31536000 %}
     {{ years }} 년 전
   {% else %}
