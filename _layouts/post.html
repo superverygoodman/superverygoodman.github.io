@@ -18,8 +18,8 @@ layout: default
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
             <span class="meta">
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              님이 작성 {{ page.date | date: '%Y년 %m월 %d일' }} &middot; {% include read_time.html
+              <strong><a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a></strong>
+              {{ page.date | date: '%Y년 %m월 %d일' }} &middot; {% include read_time.html
               content=page.content %}
             </span>
           </div>
