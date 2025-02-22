@@ -1,3 +1,29 @@
 <span class="reading-time" title="Estimated read time">
-  {% assign words = include.content | number_of_words %}
-  {% if words < 270 %} 1 분전 {% else %} {{ words | divided_by:135 }} 분전 {% endif %} 읽음 </span>
+  {% assign post_date = page.date %}
+  {% assign current_time = 'now' | date: '%s' %}  <!-- 현재 시간을 초 단위로 가져오기 -->
+  {% assign post_time = post_date | date: '%s' %}  <!-- 게시된 시간도 초 단위로 변환 -->
+
+  {% assign time_difference = current_time | minus: post_time %}  <!-- 두 시간의 차이 계산 -->
+
+  {% assign days_in_year = 365 %}
+  {% assign days_in_month = 30 %}
+
+  {% if time_difference < 60 %}
+    {{ time_difference }} 초 전  <!-- 1분 이내 -->
+  {% elsif time_difference < 3600 %}
+    {% assign minutes = time_difference | divided_by: 60 %}
+    {{ minutes }} 분 전
+  {% elsif time_difference < 86400 %}
+    {% assign hours = time_difference | divided_by: 3600 %}
+    {{ hours }} 시간 전
+  {% elsif time_difference < 2592000 %}
+    {% assign days = time_difference | divided_by: 86400 %}
+    {{ days }} 일 전
+  {% elsif time_difference < days_in_year * 86400 %}
+    {% assign months = time_difference | divided_by: days_in_month * 86400 %}
+    {{ months }} 개월 전
+  {% elsif time_difference >= days_in_year * 86400 %}
+    {% assign years = time_difference | divided_by: days_in_year * 86400 %}
+    {{ years }} 년 전
+  {% endif %}
+ </span>
