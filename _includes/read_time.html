@@ -1,6 +1,6 @@
 <span class="reading-time" title="Estimated read time">
   {% assign page_layout = page.layout %}
-  {% if page_layout = 'home' %}
+  {% if page_layout == 'home' %}
   {% assign post_date = post.date %}
   {% else %}
   {% assign post_date = page.date %}
