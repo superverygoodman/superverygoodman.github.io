@@ -2,7 +2,7 @@ title:              Superverygoodman의 블로그
 email:              timeshort@naver.com
 description:        개발을 즐기는 블로거
 author:             Superverygoodman
-baseurl:            "/startbootstrap-clean-blog-jekyll"
+baseurl:            ""
 url:                "https://superverygoodman.github.io"
 
 # Social Profiles
