@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 });
 async function loadTime () {
-    await fetch('https://worldtimeapi.org/api/timezone/Asia/Seoul')
+    await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Seoul')
     .then(response => response.json())
     .then(response => {
         let time = new Date(response.datetime);
