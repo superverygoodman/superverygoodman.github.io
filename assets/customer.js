@@ -1,11 +1,12 @@
-window.addEventListener('DOMContentLoaded', async () => {
-    const data_load = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Seoul');
-    const data = await data_load.json();
-    let cust_now = new Date(data.dateTime);
+const now = new Date();
+const utc = now.getTime() + (now.getTimezoneOffset() * 60 * 1000);
+const koreaTimeDiff = 9 * 60 * 60 * 1000;
+const korNow = new Date(utc+koreaTimeDiff);
+window.addEventListener('DOMContentLoaded', () => {
     console.log(cust_now.getTime())
     document.querySelectorAll(".reading-time").forEach(ele => {
         let post = ele.dataset.posttime;
-        let time_diffrence = cust_now.getTime() -post;
+        let time_diffrence = korNow.getTime() -post;
         console.log("post : "+post);
         console.log(time_diffrence)
         
