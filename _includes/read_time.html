@@ -9,7 +9,7 @@
   {% assign current_time = 'now' | date: '%s' %}
   {% assign post_time = post_date | date: '%s' %}
   {% assign time_difference = current_time | minus: post_time %}
-  {{ current_time | date: '%Y %m, %d' }} 정규포맷으로 바꾸기
+  {{ current_time | date: '%Y년 %m월, %d일 %hh시 %mm분 %ss초' }} 정규포맷으로 바꾸기
   {% if time_difference < 60 %}
     {{ time_difference }} 초 전
   {% elsif time_difference < 3600 %}
