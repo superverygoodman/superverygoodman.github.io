@@ -1,8 +1,8 @@
 console.log("작동중?")
     let cust_now;
     let vari;
-window.addEventListener('DOMContentLoaded', () => {
-    cust_now = loadTime();
+window.addEventListener('DOMContentLoaded', async () => {
+    cust_now = await loadTime();
     document.querySelectorAll(".reading-time").forEach(ele => {
         let post = new Date(ele.dataset.posttime);
         let time_diffrence = cust_now.getTime() -post.getTime();
@@ -15,6 +15,6 @@ async function loadTime () {
   const data = await response.json();
   return new Date(data.datetime);
 }
-console.log("2차수정이요")
-console.log("2차수정이요")
-console.log("2차수정이요")
+console.log("3차수정이요")
+console.log("3차수정이요")
+console.log("3차수정이요")
