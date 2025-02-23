@@ -15,6 +15,6 @@ async function loadTime () {
   const data = await response.json();
   return new Date(data.datetime);
 }
-console.log("이건커밋용")
-console.log("이건커밋용")
-console.log("이건커밋용")
+console.log("2차수정이요")
+console.log("2차수정이요")
+console.log("2차수정이요")
