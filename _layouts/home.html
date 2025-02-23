@@ -48,7 +48,7 @@ layout: default
             {{ site.author }}
             {% endif %}
              &middot; 
-            {{ post.date | date: '%Y년 %m월, %d일' }} &middot; {% include read_time.html content=post.content %}            
+            {{ post.date | date: '%Y년 %m월 %d일 %H:%M:%S' }} &middot; {% include read_time.html content=post.content %}            
           </p>
         </article>
 
