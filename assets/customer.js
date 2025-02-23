@@ -4,8 +4,8 @@ const koreaTimeDiff = 9 * 60 * 60 * 1000;
 const korNow = new Date(utc+koreaTimeDiff);
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(".reading-time").forEach(ele => {
-        let post = ele.dataset.posttime;
-        let time_difference = korNow.getTime() -post;
+        let post = new Date(ele.dataset.posttime);
+        let time_difference = korNow.getTime() -post.getTime();
         console.log("post : "+post);
         console.log(time_difference)
         if (time_difference < 60 ) {
