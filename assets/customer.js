@@ -1,5 +1,6 @@
 console.log("작동중?")
     let cust_now;
+    let vari;
 window.addEventListener('DOMContentLoaded', () => {
     cust_now = loadTime();
     document.querySelectorAll(".reading-time").forEach(ele => {
@@ -13,6 +14,9 @@ async function loadTime () {
     .then(response => response.json())
     .then(response => {
         let time = new Date(response.datetime);
+        console.log(time)
+        console.log(response)
+        vari = response;
         return time;
     })
 }
