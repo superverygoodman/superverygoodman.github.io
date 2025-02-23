@@ -15,19 +15,7 @@ async function loadTime () {
   const data = await response.json();
   return new Date(data.datetime);
 }
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
-console.log("3차수정이요")
+
 console.log("3차수정이요")
 console.log("3차수정이요")
 console.log("3차수정이요")
