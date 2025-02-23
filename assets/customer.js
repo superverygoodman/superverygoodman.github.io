@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let post = new Date(ele.dataset.posttime);
         let time_diffrence = post.getTime()
         console.log(time_diffrence)
+        
     })
 });
 async function loadTime () {
@@ -20,3 +21,6 @@ async function loadTime () {
         return time;
     })
 }
+console.log("이건커밋용")
+console.log("이건커밋용")
+console.log("이건커밋용")
