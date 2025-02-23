@@ -25,17 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 });
+let str = "커밋반영"
+ console.log(str)
 
-let commit = {0,0,0,0}
 
-console.log("제발 커밋좀 반영해라 ㅡㅡ")
-
-console.log("반영하라고!!!!)
-
-console.log("제발좀")
-
-console.log("제발 왜안하녀고")
-
-console.log("제발 커밋좀 반영해라 ㅡㅡ")
-console.log("제발 커밋좀 반영해라 ㅡㅡ")
-console.log("제발 커밋좀 반영해라 ㅡㅡ")
