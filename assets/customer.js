@@ -3,7 +3,6 @@ const utc = now.getTime() + (now.getTimezoneOffset() * 60 * 1000);
 const koreaTimeDiff = 9 * 60 * 60 * 1000;
 const korNow = new Date(utc+koreaTimeDiff);
 window.addEventListener('DOMContentLoaded', () => {
-    console.log(cust_now.getTime())
     document.querySelectorAll(".reading-time").forEach(ele => {
         let post = ele.dataset.posttime;
         let time_diffrence = korNow.getTime() -post;
