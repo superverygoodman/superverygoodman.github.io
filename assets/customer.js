@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     cust_now = loadTime();
     document.querySelectorAll(".reading-time").forEach(ele => {
         let post = new Date(ele.dataset.posttime);
-        let time_diffrence = post.getTime() - cust_now.getTime()
+        let time_diffrence = post.getTime()
         console.log(time_diffrence)
     })
 });
