@@ -1,6 +1,6 @@
 console.log("작동중?")
     let cust_now;
-]window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     fetch('https://worldtimeapi.org/api/timezone/Asia/Seoul')
     .then(response => response.json())
     .then(response => {
