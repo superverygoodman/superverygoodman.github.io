@@ -11,15 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 });
 async function loadTime () {
-    await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Seoul')
-    .then(response => response.json())
-    .then(response => {
-        let time = new Date(response.datetime);
-        console.log(time)
-        console.log(response)
-        vari = response;
-        return time;
-    })
+  const response = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Seoul');
+  const data = await response.json();
+  return new Date(data.datetime);
 }
 console.log("이건커밋용")
 console.log("이건커밋용")
